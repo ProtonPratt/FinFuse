@@ -1,0 +1,21 @@
+model_config,accuracy,mda,rmse_proba,rmse_class,roc_auc,report,cm
+Fused_LSTMemb_And_FinBERT_Sentiment,0.5330073349633252,0.5330073349633252,0.5535052151128477,0.6833686157826351,0.5337653641972356,"              precision    recall  f1-score   support
+
+           0       0.53      0.66      0.59       206
+           1       0.54      0.41      0.46       203
+
+    accuracy                           0.53       409
+   macro avg       0.53      0.53      0.53       409
+weighted avg       0.53      0.53      0.53       409
+","[[135  71]
+ [120  83]]"
+Fused_LSTMemb_And_ST_all-MiniLM-L6-v2,0.5012224938875306,0.5012224938875306,0.6590479062066731,0.7062418184393143,0.5242718446601942,"              precision    recall  f1-score   support
+
+           0       0.50      0.53      0.52       206
+           1       0.50      0.47      0.48       203
+
+    accuracy                           0.50       409
+   macro avg       0.50      0.50      0.50       409
+weighted avg       0.50      0.50      0.50       409
+","[[110  96]
+ [108  95]]"

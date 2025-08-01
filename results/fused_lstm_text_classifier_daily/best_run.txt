@@ -1,0 +1,26 @@
+--- Overall Fused (LSTM Emb + Text) Model Comparison ---
+                            model_config  accuracy       mda  rmse_proba  rmse_class   roc_auc
+0    Fused_LSTMemb_And_FinBERT_Sentiment  0.540342  0.540342    0.542048    0.677981  0.563274
+1         Fused_LSTMemb_And_FinBERT_Tone  0.523227  0.523227    0.545705    0.690487  0.545602
+2             Fused_LSTMemb_And_FinBERT2  0.528117  0.528117    0.552995    0.686937  0.521641
+3    Fused_LSTMemb_And_RoBERTa_Sentiment  0.515892  0.515892    0.564002    0.695778  0.520685
+4            Fused_LSTMemb_And_BERT_Base  0.528117  0.528117    0.548691    0.686937  0.525300
+5  Fused_LSTMemb_And_ST_all-MiniLM-L6-v2  0.506112  0.506112    0.663218    0.702771  0.520541
+
+--- Overall Fused (LSTM Emb + Text) Model Comparison ---
+                            model_config  accuracy       mda  rmse_proba  rmse_class   roc_auc
+0    Fused_LSTMemb_And_FinBERT_Sentiment  0.542787  0.542787    0.551396    0.676175  0.537998
+1         Fused_LSTMemb_And_FinBERT_Tone  0.515892  0.515892    0.555397    0.695778  0.521498
+2             Fused_LSTMemb_And_FinBERT2  0.537897  0.537897    0.554069    0.679781  0.550481
+3    Fused_LSTMemb_And_RoBERTa_Sentiment  0.513447  0.513447    0.560529    0.697533  0.516213
+4            Fused_LSTMemb_And_BERT_Base  0.537897  0.537897    0.548826    0.679781  0.540628
+5  Fused_LSTMemb_And_ST_all-MiniLM-L6-v2  0.506112  0.506112    0.661046    0.702771  0.528744
+
+--- Overall Fused (LSTM Emb + Text) Model Comparison ---
+                            model_config  accuracy       mda  rmse_proba  rmse_class   roc_auc
+0    Fused_LSTMemb_And_FinBERT_Sentiment  0.528117  0.528117    0.554477    0.686937  0.540844
+1         Fused_LSTMemb_And_FinBERT_Tone  0.533007  0.533007    0.542186    0.683369  0.533454
+2             Fused_LSTMemb_And_FinBERT2  0.552567  0.552567    0.545488    0.668904  0.549715
+3    Fused_LSTMemb_And_RoBERTa_Sentiment  0.493888  0.493888    0.566787    0.711416  0.514204
+4            Fused_LSTMemb_And_BERT_Base  0.515892  0.515892    0.558116    0.695778  0.514396
+5  Fused_LSTMemb_And_ST_all-MiniLM-L6-v2  0.537897  0.537897    0.641967    0.679781  0.540031

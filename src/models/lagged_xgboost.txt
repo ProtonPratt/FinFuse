@@ -1,0 +1,101 @@
+(ins_dec) (base) pratyush.jena@nayana:/ssd_scratch/pratyush.jena/AmbiguityAssault/dataset/stocks_cleaned$ python lagged.py 
+Processing file: ./TSLA_yahoo_data_0.csv
+Processing file: ./NKE_yahoo_data_0.csv
+Processing file: ./NVDA_yahoo_data_0.csv
+Processing file: ./AMZN_yahoo_data_0.csv
+Processing file: ./AAPL_yahoo_data_0.csv
+Adding lagged features...
+Added lagged features: ['Adj Close_lag_1', 'Adj Close_lag_2', 'Daily Return_lag_1']
+Adding sliding window features...
+Added sliding window features: ['Adj Close_win5_mean', 'Adj Close_win5_std', 'Adj Close_win5_min', 'Adj Close_win5_max', 'Adj Close_win10_mean', 'Adj Close_win10_std', 'Adj Close_win10_min', 'Adj Close_win10_max', 'Adj Close_win20_mean', 'Adj Close_win20_std', 'Adj Close_win20_min', 'Adj Close_win20_max', 'Volume_win5_mean', 'Volume_win5_sum', 'Volume_win5_std', 'Volume_win10_mean', 'Volume_win10_sum', 'Volume_win10_std', 'Daily Return_win3_mean', 'Daily Return_win3_std', 'Daily Return_win3_sum', 'Daily Return_win5_mean', 'Daily Return_win5_std', 'Daily Return_win5_sum', 'Daily Return_win10_mean', 'Daily Return_win10_std', 'Daily Return_win10_sum']
+Shape before NaN drop (after adding all features): (16645, 48)
+Number of potential features before NaN drop: 42
+Shape after NaN drop: (9840, 48)
+Number of final features for model: 42
+Training set size: 7872, Test set size: 1968
+Number of features: 42
+Calculated scale_pos_weight: 0.93 (class 0: 3783, class 1: 4089)
+Training XGBoost model...
+/ssd_scratch/miniconda3/envs/ins_dec/lib/python3.11/site-packages/xgboost/callback.py:386: UserWarning: [13:33:11] WARNING: /workspace/src/learner.cc:738: 
+Parameters: { "use_label_encoder" } are not used.
+
+  self.starting_round = model.num_boosted_rounds()
+Making predictions on the test set...
+
+--- Model Evaluation ---
+Accuracy: 0.5386
+RMSE: 0.6793
+Mean Directional Accuracy: 0.5386
+ROC AUC Score: 0.5177
+Confusion Matrix:
+[[300 605]
+ [303 760]]
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.50      0.33      0.40       905
+           1       0.56      0.71      0.63      1063
+
+    accuracy                           0.54      1968
+   macro avg       0.53      0.52      0.51      1968
+weighted avg       0.53      0.54      0.52      1968
+
+
+Feature Importances (Top 20):
+                   feature  importance
+15                   Close    0.039301
+4     Adj Close_win10_mean    0.035770
+32              Market Cap    0.032450
+41         Volume_win5_sum    0.032355
+13      Adj Close_win5_min    0.032046
+1          Adj Close_lag_1    0.031428
+39        Volume_win5_mean    0.029944
+14      Adj Close_win5_std    0.029173
+16            Daily Return    0.029101
+7      Adj Close_win20_max    0.028881
+29                     Low    0.028663
+23   Daily Return_win3_sum    0.027214
+6      Adj Close_win10_std    0.027205
+26   Daily Return_win5_sum    0.026983
+24  Daily Return_win5_mean    0.026724
+37        Volume_win10_std    0.026434
+31                    MA50    0.026347
+40         Volume_win5_std    0.026281
+21  Daily Return_win3_mean    0.025983
+10     Adj Close_win20_std    0.025512
+
+Model training and evaluation complete.
+
+┌──────────────────────────────┐               ┌──────────────────────────────────┐
+│     Stock Price Features     │               │   News Headlines (Text Input)    │
+│  (e.g., price, volume, lag)  │               │   "Apple beats Q2 expectations"  │
+└────────────┬─────────────────┘               └────────────┬─────────────────────┘
+             │                                              ▼
+             │                                ┌────────────────────────────────────┐
+             │                                │  Pretrained Text Encoder (Frozen): │
+             │                                │  - FinBERT / RoBERTa / BERT / ST   │
+             │                                └────────────────────────────────────┘
+             │                                              │
+             ▼                                              ▼
+ ┌──────────────────────────────┐              ┌────────────────────────────────────┐
+ │   Scaled Stock Features      │              │   Extracted Text Embeddings /      │
+ │   (Numerical tabular input)  │              │   Sentiment Vectors                │
+ └────────────┬─────────────────┘              │                                    │
+              │                                └────────────────────────────────────┘
+              │                                             │
+              └──────────────┬──────────────────────────────┘
+                             ▼
+                 ┌────────────────────────────────────────┐
+                 │   Concatenate [Stock + Text Features]  │
+                 └────────────────────────────────────────┘
+                             │
+                             ▼
+                 ┌────────────────────────────────────────┐
+                 │         Simple MLP Classifier          │
+                 │  Linear → ReLU → Dropout → ... → Output│
+                 └────────────────────────────────────────┘
+                             │
+                             ▼
+                 ┌────────────────────────────┐
+                 │          OUTPUT            │
+                 └────────────────────────────┘

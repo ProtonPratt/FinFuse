@@ -1,0 +1,61 @@
+model,accuracy,roc_auc,report,cm
+FinBERT_Sentiment,0.49144254278728605,0.5335740590176479,"              precision    recall  f1-score   support
+
+           0       0.49      0.20      0.28       206
+           1       0.49      0.79      0.61       203
+
+    accuracy                           0.49       409
+   macro avg       0.49      0.49      0.44       409
+weighted avg       0.49      0.49      0.44       409
+","[[ 41 165]
+ [ 43 160]]"
+FinBERT_Tone,0.4963325183374083,0.5,"              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       206
+           1       0.50      1.00      0.66       203
+
+    accuracy                           0.50       409
+   macro avg       0.25      0.50      0.33       409
+weighted avg       0.25      0.50      0.33       409
+","[[  0 206]
+ [  0 203]]"
+FinBERT2,0.49877750611246946,0.5247979339040605,"              precision    recall  f1-score   support
+
+           0       0.50      0.25      0.34       206
+           1       0.50      0.75      0.60       203
+
+    accuracy                           0.50       409
+   macro avg       0.50      0.50      0.47       409
+weighted avg       0.50      0.50      0.47       409
+","[[ 52 154]
+ [ 51 152]]"
+RoBERTa_Sentiment,0.5012224938875306,0.47756946769333775,"              precision    recall  f1-score   support
+
+           0       0.51      0.33      0.40       206
+           1       0.50      0.67      0.57       203
+
+    accuracy                           0.50       409
+   macro avg       0.50      0.50      0.49       409
+weighted avg       0.50      0.50      0.49       409
+","[[ 69 137]
+ [ 67 136]]"
+BERT_Base,0.4963325183374083,0.5,"              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       206
+           1       0.50      1.00      0.66       203
+
+    accuracy                           0.50       409
+   macro avg       0.25      0.50      0.33       409
+weighted avg       0.25      0.50      0.33       409
+","[[  0 206]
+ [  0 203]]"
+ST_all-MiniLM-L6-v2,0.511002444987775,0.5183413840929743,"              precision    recall  f1-score   support
+
+           0       0.52      0.48      0.49       206
+           1       0.51      0.55      0.53       203
+
+    accuracy                           0.51       409
+   macro avg       0.51      0.51      0.51       409
+weighted avg       0.51      0.51      0.51       409
+","[[ 98 108]
+ [ 92 111]]"

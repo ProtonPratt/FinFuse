@@ -1,0 +1,23 @@
+model_config,accuracy,mda,rmse_proba,rmse_class,roc_auc,report,cm
+LSTM_StockOnly_Lag1_Hist1_2_3_5,0.4743276283618582,0.4743276283618582,0.5093584736676486,0.7250326693592102,0.4800564350279784,"              precision    recall  f1-score   support
+
+           0       0.48      0.51      0.50       206
+           1       0.47      0.43      0.45       203
+
+    accuracy                           0.47       409
+   macro avg       0.47      0.47      0.47       409
+weighted avg       0.47      0.47      0.47       409
+","[[106 100]
+ [115  88]]"
+
+Epoch 1/50 => Train Loss: 0.6939, TA: 0.4984 | Val Loss: 0.6937, VA: 0.4828
+  New best VA: 0.4828
+Epoch 2/50 => Train Loss: 0.6921, TA: 0.5105 | Val Loss: 0.6924, VA: 0.4926
+  New best VA: 0.4926
+Epoch 3/50 => Train Loss: 0.6920, TA: 0.5163 | Val Loss: 0.6929, VA: 0.4902
+Epoch 4/50 => Train Loss: 0.6919, TA: 0.5073 | Val Loss: 0.6912, VA: 0.5074
+  New best VA: 0.5074
+Epoch 5/50 => Train Loss: 0.6914, TA: 0.5220 | Val Loss: 0.6901, VA: 0.5294
+  New best VA: 0.5294
+Epoch 6/50 => Train Loss: 0.6908, TA: 0.5289 | Val Loss: 0.6893, VA: 0.5343
+  New best VA: 0.5343

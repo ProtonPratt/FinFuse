@@ -1,0 +1,17 @@
+XGBoost Baseline for Target Lag: 2 days
+Test Accuracy: 0.5294
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.01       257
+           1       0.53      1.00      0.69       287
+
+    accuracy                           0.53       544
+   macro avg       0.76      0.50      0.35       544
+weighted avg       0.75      0.53      0.37       544
+
+
+Confusion Matrix:
+[[  1 256]
+ [  0 287]]

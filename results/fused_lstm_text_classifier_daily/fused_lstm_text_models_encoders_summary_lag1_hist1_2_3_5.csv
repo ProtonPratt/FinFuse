@@ -1,0 +1,61 @@
+model_config,accuracy,mda,rmse_proba,rmse_class,roc_auc,report,cm
+Fused_LSTMemb_And_FinBERT_Sentiment,0.5354523227383863,0.5354523227383863,0.5658068148682265,0.6815773450325455,0.5339805825242718,"              precision    recall  f1-score   support
+
+           0       0.53      0.60      0.57       206
+           1       0.54      0.47      0.50       203
+
+    accuracy                           0.54       409
+   macro avg       0.54      0.53      0.53       409
+weighted avg       0.54      0.54      0.53       409
+","[[124  82]
+ [108  95]]"
+Fused_LSTMemb_And_FinBERT_Tone,0.5061124694376528,0.5061124694376528,0.5750588221109509,0.7027713216703902,0.5158783299057823,"              precision    recall  f1-score   support
+
+           0       0.51      0.69      0.58       206
+           1       0.50      0.32      0.39       203
+
+    accuracy                           0.51       409
+   macro avg       0.51      0.50      0.49       409
+weighted avg       0.51      0.51      0.49       409
+","[[142  64]
+ [138  65]]"
+Fused_LSTMemb_And_FinBERT2,0.5354523227383863,0.5354523227383863,0.5627297356141675,0.6815773450325455,0.5460806351331962,"              precision    recall  f1-score   support
+
+           0       0.53      0.63      0.58       206
+           1       0.54      0.44      0.49       203
+
+    accuracy                           0.54       409
+   macro avg       0.54      0.53      0.53       409
+weighted avg       0.54      0.54      0.53       409
+","[[129  77]
+ [113  90]]"
+Fused_LSTMemb_And_RoBERTa_Sentiment,0.511002444987775,0.511002444987775,0.5882937041201733,0.6992836012750656,0.502092400401741,"              precision    recall  f1-score   support
+
+           0       0.51      0.60      0.55       206
+           1       0.51      0.42      0.46       203
+
+    accuracy                           0.51       409
+   macro avg       0.51      0.51      0.51       409
+weighted avg       0.51      0.51      0.51       409
+","[[123  83]
+ [117  86]]"
+Fused_LSTMemb_And_BERT_Base,0.5476772616136919,0.5476772616136919,0.5689753442309765,0.6725494319277268,0.5322588359079823,"              precision    recall  f1-score   support
+
+           0       0.55      0.57      0.56       206
+           1       0.55      0.52      0.53       203
+
+    accuracy                           0.55       409
+   macro avg       0.55      0.55      0.55       409
+weighted avg       0.55      0.55      0.55       409
+","[[118  88]
+ [ 97 106]]"
+Fused_LSTMemb_And_ST_all-MiniLM-L6-v2,0.5012224938875306,0.5012224938875306,0.6739417823358991,0.7062418184393143,0.5354153713711799,"              precision    recall  f1-score   support
+
+           0       0.50      0.54      0.52       206
+           1       0.50      0.46      0.48       203
+
+    accuracy                           0.50       409
+   macro avg       0.50      0.50      0.50       409
+weighted avg       0.50      0.50      0.50       409
+","[[111  95]
+ [109  94]]"

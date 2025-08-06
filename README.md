@@ -130,7 +130,7 @@ The following tables summarize the performance of the different models. All resu
 | Raw Stock + BERT Base | 0.5208 | 0.5092 | 0.51 |
 | Raw Stock + ST_all-MiniLM-L6-v2 | 0.4914 | 0.5133 | 0.49 |
 
-### Early Fusion: LSTM Stock Embeddings + Text Features (MLP)
+### Late Fusion: LSTM Stock Embeddings + Text Features (MLP)
 
 | Fused Model (LSTM Emb. + Text Type) | Accuracy (MDA) | ROC AUC | F1 (Macro) |
 | :--- | :--- | :--- | :--- |
